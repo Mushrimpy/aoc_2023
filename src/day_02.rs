@@ -25,7 +25,7 @@ fn parse(input: &str) -> Vec<Vec<Round>> {
             let mut round = Round::default();
             for c in cubes {
                 let (amount, color) = c.split_once(" ").unwrap();
-                let amount: usize = amount.parse().unwrap();
+                let amount: u32 = amount.parse().unwrap();
                 match &color.chars().nth(0).unwrap() {
                     'r' => round.red = amount,
                     'g' => round.green = amount,
