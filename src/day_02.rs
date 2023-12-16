@@ -1,8 +1,8 @@
 #[derive(Default)]
 struct Round {
-    red: usize,
-    green: usize,
-    blue: usize,
+    red: u32,
+    green: u32,
+    blue: u32,
 }
 
 impl Round {
@@ -10,7 +10,7 @@ impl Round {
         self.red <= 12 && self.green <= 13 && self.blue <= 14
     }
     fn pow(&self) -> u32 {
-        (self.red * self.green * self.blue) as u32
+        self.red * self.green * self.blue
     }
 }
 
